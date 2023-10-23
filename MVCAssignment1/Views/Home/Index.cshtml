@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1> Colors </h1>
+
+@if (ViewData["list"] != null)
+{
+    <ol>
+        @foreach (string str in (IEnumerable<string>)ViewData["list"])
+        {
+            <li>
+                @str
+            </li>
+        }
+    </ol>
+}
+

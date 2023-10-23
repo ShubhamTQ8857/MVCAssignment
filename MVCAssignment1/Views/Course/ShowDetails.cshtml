@@ -1,0 +1,42 @@
+﻿@using (Html.BeginForm())
+{
+
+
+    <table>
+        <tr>
+            <td>Enter your name</td>
+            <td>
+                @Html.TextBox("username")
+            </td>
+        </tr>
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                @Html.RadioButton("gender","Male") Male
+                @Html.RadioButton("gender","Female") Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select Interested</td>
+            <td>
+                <input type="checkbox" name="course" value="C#" /> C#
+                <input type="checkbox" name="course" value="Java" /> Java
+                <input type="checkbox" name="course" value="Python" /> Python
+            </td>
+        </tr>
+        <tr>
+            <td>Would You Like To Know MoreAbout The Course</td>
+            <td>
+                @Html.DropDownList("option")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Add" />
+            </td>
+        </tr>
+    </table>
+
+
+}

@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Product List";
+}
+
+<h2>@ViewData["Message"]</h2>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var product in ViewBag.Products)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Price.ToString()</td>
+        </tr>
+    }
+</table>
